@@ -271,6 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const li = document.createElement('li');
                 li.textContent = notification.message || '내용 없음';
                 li.dataset.id = notification.id;
+
                 if (!notification.isRead) li.style.fontWeight = 'bold';
 
                 li.addEventListener('click', () => markAsRead(notification.id, li));
@@ -288,8 +289,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.textContent = notification.message || '내용 없음';
                 li.dataset.id = notification.id;
                 if (!notification.isRead) li.style.fontWeight = 'bold';
-
                 li.addEventListener('click', () => markAsRead(notification.id, li));
+                li.addEventListener('click', () => {
+                    const targetId = notification.targetId; // targetId가 게시물의 ID라고 가정
+                    if (targetId) {
+                        window.location.href = `/articles/${targetId}`; // 게시물 페이지로 이동
+                    } else {
+                        console.warn('targetId가 없습니다.');
+                    }
+                });
                 commentLikeList.appendChild(li);
             });
         } else {
