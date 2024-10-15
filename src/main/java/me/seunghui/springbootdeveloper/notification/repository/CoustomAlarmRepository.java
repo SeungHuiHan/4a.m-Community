@@ -11,5 +11,6 @@ import java.util.Optional;
 public interface CoustomAlarmRepository extends JpaRepository<CoustomAlarm, Long> {
     List<CoustomAlarm> findByUserId(String userId);
     Optional<CoustomAlarm> findByIdAndUserId(Long id, String userId);
+    
 }
 

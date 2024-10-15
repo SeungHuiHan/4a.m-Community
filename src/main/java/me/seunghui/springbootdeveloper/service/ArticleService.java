@@ -2,12 +2,10 @@ package me.seunghui.springbootdeveloper.service;//package me.seunghui.springboot
 
 import lombok.RequiredArgsConstructor;
 import me.seunghui.springbootdeveloper.Repository.ArticleRepository;
-import me.seunghui.springbootdeveloper.Repository.CommentRepository;
 import me.seunghui.springbootdeveloper.domain.Article;
 import me.seunghui.springbootdeveloper.domain.InsertedFile;
 import me.seunghui.springbootdeveloper.dto.Article.*;
 import me.seunghui.springbootdeveloper.dto.User.UserArticlesList;
-import me.seunghui.springbootdeveloper.dto.User.UserCommentedArticlesList;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -17,13 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class ArticleService {
     private final ArticleRepository articleRepository;
-    private final CommentRepository commentRepository;
     private final FileUploadService fileUploadService;
     private final LikeService likeService;
 
@@ -81,12 +77,12 @@ public class ArticleService {
     }
 
     //게시글 조회수 증가
-    public Article getIncreaseViewCount(Long id) {
+    public void getIncreaseViewCount(Long id) {
         Article article=articleRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
         article.isIncrementViewCount();  // 조회수 증가
          // 변경된 조회수를 저장
-        return articleRepository.save(article);
+        articleRepository.save(article);
     }
 
 

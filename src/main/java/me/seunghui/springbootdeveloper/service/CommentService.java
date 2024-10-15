@@ -9,6 +9,7 @@ import me.seunghui.springbootdeveloper.domain.Comment;
 import me.seunghui.springbootdeveloper.dto.Comment.*;
 import me.seunghui.springbootdeveloper.dto.User.UserCommentedArticlesList;
 import me.seunghui.springbootdeveloper.dto.User.UserCommentsList;
+import me.seunghui.springbootdeveloper.notification.service.NotificationService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
 public class CommentService {
     private final CommentRepository commentRepository;
     private final ArticleRepository articleRepository;
+    private final NotificationService notificationService;
     //1. 게시글에 맞는 한개 댓글 생성
     public Comment saveComment(AddCommentRequest request,Long articleId,String userName) {
         Article article = articleRepository.findById(articleId).orElseThrow(()->new IllegalArgumentException("Article not found"));
