@@ -464,21 +464,21 @@
 <summary>📋 알람기능 구현 </summary>
 
 ### 🔍 미리 보기
-- [커스텀 알람 리스트 화면](#커스텀_알람_리스트_화면)
-- [커스텀 알람 생성](#커스텀_알람_생성)
-- [수정된 알람 리스트](#수정된_알람_리스트)
+- [커스텀 알람 리스트 화면](#커스텀 알람 리스트 화면)
+- [커스텀 알람 생성](#커스텀 알람 생성)
+- [수정된 알람 리스트](#수정된 알람 리스트)
 - [알람 수정](#알람 수정)
-- [일반 알림 리스트](#일반_알림_리스트)
+- [일반 알림 리스트](#일반 알림 리스트)
 ### 커스텀 알람 리스트 화면
 
-![image](https://github.com/SeungHuiHan/4a.m-Community/issues/76#issue-2587669127)
+![커스텀 알람 리스트](https://github.com/user-attachments/assets/e04c539c-dacf-471f-a36f-3b4ab89e1528)
 
 사용자가 추가한 알람들의 리스트를 보여주는 화면입니다. 각 알람은 수정 및 삭제가 가능하며, 알람은 설정한 시간에 맞춰 작동합니다.
 
 
 ### 커스텀 알람 생성
 
-![image](https://github.com/SeungHuiHan/4a.m-Community/issues/77#issue-2587669433)
+![커스텀 알람 생성](https://github.com/user-attachments/assets/db979627-e559-49ee-87b6-009b7461877d)
 
 사용자가 알람을 생성할 수 있는 화면입니다. 알람 메시지와 시간과 요일을 설정하고, 알람을 활성화할 요일을 선택할 수 있습니다. 알람은 동적 스케줄링을 통해 선택된 요일과 시간에 맞춰 작동합니다.
 커스텀 알람을 웹소켓으로 구현할 때 클라이언트 입력을 수신 받는 handlermessage에서 순환 참조가 발생하여 AplicationEvent를 활용하여 커스텀 서비스를 직접 참조 하지 않도록 구현하여 순환참조를 해결하였습니다.
@@ -486,15 +486,14 @@
 
 ### 수정된 알람 리스트
 
-
-![image](https://github.com/SeungHuiHan/4a.m-Community/issues/76#issue-2587669127)
+![수정된 알람](https://github.com/user-attachments/assets/cf6bccef-8630-4252-bf1d-59e5bee6ab62)
 
 수정된 알람은 리스트에서 실시간으로 반영되며, 사용자가 설정한 새로운 시간과 메시지로 업데이트됩니다.
 
 
 ### 알람 수정
 
-![image](https://github.com/SeungHuiHan/4a.m-Community/issues/74#issue-2587668334)
+![알람 수정](https://github.com/user-attachments/assets/9d2a3465-6f45-42e2-b304-48c0ee0a7d9c)
 
 기존 알람을 수정할 수 있는 화면입니다. 알람 시간을 변경하고 요일을 추가/제거할 수 있으며, 메시지 역시 수정 가능합니다.
 
@@ -502,11 +501,11 @@
 ### 일반 알림 리스트
 
 
-![image](https://github.com/SeungHuiHan/4a.m-Community/issues/75#issue-2587668704)
+![일반 알림 리스트](https://github.com/user-attachments/assets/fd22e1ea-3b8f-414c-ae28-e327ec44d8db)
 
 사용자가 설정한 알람 외에도 댓글 및 좋아요 알림을 실시간으로 받을 수 있습니다. 알림 리스트는 최신 알림부터 보여지며, 각 알림의 상세 내용이 표시됩니다.알람은 알람 타입에 따라 구별되어 리스트을 받을 수 있습니다.
 댓글 및 좋아요 알림같은 경우 클릭 시 읽음 처리가 되며 알림 리스트에 더이상 나오지 않게 하였고 게시물 api로 이동할 수 있도록 설계하였습니다.
----
+
 
 
 - 
