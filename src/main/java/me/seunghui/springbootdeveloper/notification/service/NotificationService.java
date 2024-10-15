@@ -126,6 +126,13 @@ public class NotificationService {
             log.error("알림 전송 중 오류 발생: {}", e.getMessage(), e);
         }
     }
+    public void sendReCommentNotification(Long articleId, String fromAuthor) {
+        Article article = articleRepository.findById(articleId).orElseThrow(()
+                ->new IllegalArgumentException("게시글을 찾을 수 없습니다."));
+        User user=userRepository.findByEmail(fromAuthor).orElseThrow(()
+                ->new IllegalArgumentException("사용자를 찾을 수 없습니다."));
+
+    }
     /**
      * 사용자별 읽지 않은 알림 목록 조회
      *

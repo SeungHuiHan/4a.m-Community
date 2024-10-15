@@ -65,11 +65,11 @@ public class CoustomAlarmService { // 클래스 이름 수정
         Runnable notificationTask = () -> {
             DayOfWeek today = LocalDate.now().getDayOfWeek();
             LocalTime now = LocalTime.now();
-            log.info("Today: {}, Notification Days: {}", today, notificationDays);
+/*            log.info("Today: {}, Notification Days: {}", today, notificationDays);
             log.info("Comparison result: now.until(notificationTime, ChronoUnit.MINUTES) = {}"
                     , now.until(notificationTime, ChronoUnit.MINUTES));
             log.info("Now: {}, Notification Time: {}", now, notificationTime);
-            log.info("Notification Status: {}", notification.getStatus());
+            log.info("Notification Status: {}", notification.getStatus());*/
             if (notificationDays.contains(today) &&
                     now.until(notificationTime, ChronoUnit.MINUTES) == 0 &&
                     Boolean.TRUE.equals(notification.getStatus()))
