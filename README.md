@@ -468,7 +468,8 @@
 ![프로젝트 (online-video-cutter com)](https://github.com/user-attachments/assets/7db99e2b-6c8b-4b0a-a52c-d08588b7b233)
 
 
-![화면 캡처 2024-10-16 004748.png](..%2F..%2F%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202024-10-16%20004748.png)
+![화면 캡처 2024-10-16 004748](https://github.com/user-attachments/assets/5fb6149f-4859-4813-bcc8-d5af62023c73)
+
 # 1대1 랜덤 화상 채팅
 WebSocket, Spring, WebRTC를 활용하여 구현한 1대1 랜덤 화상 채팅 입니다. 
 사용자는 간단한 인터페이스를 통해 다른 사용자와 실시간으로 화상 대화를 할 수 있습니다. 
