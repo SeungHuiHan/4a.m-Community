@@ -461,9 +461,12 @@
 </details>
 
 <details>
-<summary>📋 더 자세히 보기 </summary>
+<summary>📋 화상채팅 서비스 </summary>
+### 회원가입
 
-- 
+
+![프로젝트 (online-video-cutter.com).gif](..%2F..%2F..%2FDownloads%2F%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%28online-video-cutter.com%29.gif)
+
 </details>
 
 <details>
