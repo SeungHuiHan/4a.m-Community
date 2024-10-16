@@ -24,7 +24,20 @@
 <details>
 <summary>자세히보기</summary>
 
--작성
+### ERD
+
+![너의 손주는 (2)](https://github.com/user-attachments/assets/1be67d24-b92a-4ca2-9bff-5d057a5056e5)
+---
+
+### 유즈케이스 다이어그램
+
+![user case 다이어그램-페이지-1의 복사본 drawio](https://github.com/user-attachments/assets/e068f002-799b-464c-a721-786c45cb78e8)
+---
+
+### 시퀀스 다이어그램
+
+![시퀀스 다이어그램 (2)](https://github.com/user-attachments/assets/1975a2e3-e565-446b-afad-3c2d2e8c152e)
+
 
 </details>
 
