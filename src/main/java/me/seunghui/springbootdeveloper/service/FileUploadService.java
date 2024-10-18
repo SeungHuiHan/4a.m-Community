@@ -7,6 +7,7 @@ import me.seunghui.springbootdeveloper.Repository.FileRepository;
 import me.seunghui.springbootdeveloper.domain.Article;
 import me.seunghui.springbootdeveloper.domain.InsertedFile;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -19,6 +20,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 @Log4j2
+@Transactional
 public class FileUploadService {
     private final FileRepository fileRepository;
 
