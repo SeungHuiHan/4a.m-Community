@@ -7,7 +7,7 @@ import me.seunghui.springbootdeveloper.domain.Comment;
 import java.time.LocalDateTime;
 
 @Getter
-public class CommentListViewReponse {
+public class CommentListViewResponse {
     private final Long commentId;
     private final String commentAuthor;
     private final String commentContent;
@@ -16,7 +16,7 @@ public class CommentListViewReponse {
     private final Long articleId; //게시글 아이디
     private final Long parentCommentId; // 부모 댓글의 ID
 
-    public CommentListViewReponse(Comment comment) {
+    public CommentListViewResponse(Comment comment) {
         this.commentId=comment.getCommentId();
         this.commentAuthor=comment.getCommentAuthor();
         this.commentContent=comment.getCommentContent();

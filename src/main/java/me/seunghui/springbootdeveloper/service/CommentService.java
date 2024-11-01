@@ -54,7 +54,7 @@ public class CommentService {
 //    }
 
     //2. 게시글에 달린 댓글 목록 조회(페이징)
-    public Page<CommentListViewReponse> getComments(Long articleId, CommentPageRequestDTO commentPageRequestDTO) {
+    public Page<CommentListViewResponse> getComments(Long articleId, CommentPageRequestDTO commentPageRequestDTO) {
         try{
             Sort sort= Sort.by("commentId").descending(); //pno(상품 번호)를 기준으로 내림차순(descending())으로 정렬- 최신 상품이 상위에 표시
             Pageable pageable=commentPageRequestDTO.getPageable(sort); //PageRequestDTO 객체를 사용하여 페이징 정보를 생성

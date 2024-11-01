@@ -2,8 +2,7 @@ package me.seunghui.springbootdeveloper.Repository;
 
 import me.seunghui.springbootdeveloper.domain.Article;
 import me.seunghui.springbootdeveloper.domain.Comment;
-import me.seunghui.springbootdeveloper.dto.Comment.CommentListViewReponse;
-import me.seunghui.springbootdeveloper.dto.User.UserCommentsList;
+import me.seunghui.springbootdeveloper.dto.Comment.CommentListViewResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,7 +23,7 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
     List<Comment> findByArticleId(@Param("articleId") Long articleId);
 
     @Query("SELECT c FROM Comment c WHERE c.article.id=:articleId")
-    Page<CommentListViewReponse> list(@Param("articleId") Long articleId, Pageable pageable);
+    Page<CommentListViewResponse> list(@Param("articleId") Long articleId, Pageable pageable);
 
     //특정 게시글의 특정 댓글 조회
     @Query("SELECT c FROM Comment c WHERE c.article.id = :articleId AND c.commentId = :commentId")

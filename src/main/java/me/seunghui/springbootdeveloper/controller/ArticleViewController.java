@@ -3,12 +3,11 @@ package me.seunghui.springbootdeveloper.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import me.seunghui.springbootdeveloper.domain.Article;
-import me.seunghui.springbootdeveloper.domain.Comment;
 import me.seunghui.springbootdeveloper.domain.User;
 import me.seunghui.springbootdeveloper.dto.Article.ArticleListViewResponse;
 import me.seunghui.springbootdeveloper.dto.Article.ArticleViewResponse;
 import me.seunghui.springbootdeveloper.dto.Article.PageRequestDTO;
-import me.seunghui.springbootdeveloper.dto.Comment.CommentListViewReponse;
+import me.seunghui.springbootdeveloper.dto.Comment.CommentListViewResponse;
 import me.seunghui.springbootdeveloper.dto.Comment.CommentPageRequestDTO;
 import me.seunghui.springbootdeveloper.service.ArticleService;
 import me.seunghui.springbootdeveloper.service.CommentService;
@@ -58,7 +57,7 @@ public class ArticleViewController {
 
         articleService.getIncreaseViewCount(id); // 변경된 조회수를 저장
 
-        Page<CommentListViewReponse> commentListPage = commentService.getComments(id,commentPageRequestDTO);
+        Page<CommentListViewResponse> commentListPage = commentService.getComments(id,commentPageRequestDTO);
 
         long likeCount=likeService.getLikeCount(id); //좋아요
         long commentCount = commentService.getCommentCount(id);// 조회수
@@ -74,14 +73,14 @@ public class ArticleViewController {
         //log.info("isOwner: {}", isOwner);
 
         User articleUser=userService.findByEmail(article.getAuthor());
-        String currrentUserImage=userService.findByEmail(currentUserName).getProfileImageAsBase64();
+        String currentUserImage=userService.findByEmail(currentUserName).getProfileImageAsBase64();
 
         // 게시글 정보를 모델에 추가
         model.addAttribute("article", article);
         model.addAttribute("profileImage", articleUser.getProfileImageAsBase64());
         model.addAttribute("isArticleOwner", isArticleOwner);
         model.addAttribute("currentUserName", currentUserName);
-        model.addAttribute("currrentUserImage", currrentUserImage);
+        model.addAttribute("currentUserImage", currentUserImage);
 
         model.addAttribute("comments", commentListPage.getContent());
         model.addAttribute("page", commentListPage);
@@ -95,7 +94,7 @@ public class ArticleViewController {
     // 새 게시글 작성 또는 수정 페이지로 이동
     @GetMapping("/new-article")  // "/new-article" 경로로 GET 요청을 처리
     // id가 있으면 해당 게시글을 수정, 없으면 새 글 작성
-    public String newAticle(@RequestParam(required=false)Long id, Model model) {
+    public String newArticle(@RequestParam(required=false)Long id, Model model) {
         if (id == null) {
             // ID가 없으면 빈 게시글 객체를 모델에 추가 (새 글 작성)
             model.addAttribute("article", new ArticleViewResponse());
