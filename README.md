@@ -26,17 +26,20 @@
 
 ### ERD
 
-![너의 손주는 (2)](https://github.com/user-attachments/assets/1be67d24-b92a-4ca2-9bff-5d057a5056e5)
+![너의 손주는 (2)](https://github.com/user-attachments/assets/d1b2f05a-3d27-4faf-a531-ef91d3b90f65)
+
 ---
 
 ### 유즈케이스 다이어그램
 
-![user case 다이어그램-페이지-1의 복사본 drawio](https://github.com/user-attachments/assets/e068f002-799b-464c-a721-786c45cb78e8)
+![user case 다이어그램-페이지-1의 복사본 drawio](https://github.com/user-attachments/assets/25890621-e0ab-47c9-8c5f-5ac57bec795b)
+
 ---
 
 ### 시퀀스 다이어그램
 
-![시퀀스 다이어그램 (2)](https://github.com/user-attachments/assets/1975a2e3-e565-446b-afad-3c2d2e8c152e)
+![시퀀스 다이어그램 (2)](https://github.com/user-attachments/assets/0ad6faa8-b5ce-4aab-b3ce-5e40fb40bd76)
+
 
 
 </details>
